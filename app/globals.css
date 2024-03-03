@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.button {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50%;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50%;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+}
+
+.flat {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius: 50%;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal1 {
+  width: 430px;
+  color: black;
+  height: 536px;
+  border-radius: 8px;
+  padding: 24px 16px 24px 16px;
+  gap: 32px;
+  background-color: aliceblue;
+}
+.modal1header {
+  color: black;
+  width: 398px;
+  height: 72px;
+  gap: 24px;
+  line-height: 24px;
+  size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.issusecontent {
+  width: 398px;
+  height: 384px;
+}
+hr {
+  border: 2px;
+  color: #CCCCCC;
+  align-self: center;
+}
+
+.dropdown1 {
+  min-width: 398px;
+  height: 48px;
+}
+
+.descriptionsection {
+  width: 398px;
+  height: 282px;
+  top: 102px;
+  gap: 12px;
+}
+.descriptioninput {
+  width: 398px;
+  height: 180px;
+  gap: 2;
+
+}
+
+.submit {
+  padding : 10px 20px 10px 20px;
+  gap: 8px;
+  border-radius: 4px;
+  width: 114px;
+  height: 40px;
+  background-color: black;
+  color: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal2 {
+  width: 430px;
+  height: 448px;
+  gap: 32px;
+  padding: 24px 16px 24px 16px;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
+
+.feedbackcontent {
+  width: 398px;
+  height: 296px;
+  gap: 8px;
+}
+
+.modal3 {
+  width: 430px;
+  height: 536px;
+  padding: 24px 16px 24px 16px;
+  gap: 32px;
+  background-color: aliceblue;
+  border-radius: 8px;
+  color: black;
+}
+
+.modal4 {
+  width: 430px;
+  height: 476px;
+  border-radius: 8px;
+  padding: 24px 16px 24px 16px;
+  gap: 32px;
+  background-color: azure;
+  color: black;
+}
+
+.floatmodal {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  display: flex;
+}
+
+.backtoquestions {
+  width: 1304px;
+  height: 48px;
+  top: 162px;
+  left: 67px;
+}
+
+.backtext {
+  font-weight: 500;
+  size: 24px;
+  line-height: 38px;
+  color: white;
+}
