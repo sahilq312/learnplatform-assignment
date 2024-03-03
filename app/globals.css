@@ -186,3 +186,26 @@ hr {
   line-height: 38px;
   color: white;
 }
+
+.frame1 {
+  width: 832px;
+  height: 351px;
+  border-radius: 6px;
+  gap: 16px;
+  border: 0.4px solid #717171;
+  background-color: white;
+  color: black;
+}
+
+.badge {
+  background-color: #A9D9FF;
+  width: 99px;
+  border-radius: 6px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  font-weight: 500;
+}

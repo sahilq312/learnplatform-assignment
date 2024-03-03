@@ -190,7 +190,7 @@ const Menu: FC = () => {
   };
 
   return (
-    <main className="fixed">
+    <main className="fixed ">
       <Background/>
       {openToggle ? (
         <ul className={openToggle ? " options" : "flat"}>
