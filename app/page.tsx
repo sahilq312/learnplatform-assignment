@@ -7,6 +7,7 @@ import ContactUs from "./_components/contactUs";
 import Modal from "./_components/modalButton";
 import Close from "./_components/close";
 import Background from "./_components/background/main";
+import Header from "./_components/background/header";
 
 interface ModalProps {
   onClose: () => void;
@@ -15,7 +16,7 @@ interface ModalProps {
 
 const Option1Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
   return (
-    <div className="modal1">
+    <div className="modal1 modals">
       <div className="modal1header">
         <h1 className="">
           Let us know about the issuse <br /> you are facing right know
@@ -57,7 +58,7 @@ const Option1Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
 
 const Option2Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
   return (
-    <div className="modal2">
+    <div className="modal2 modals">
       <div className="modal1header">
         <h2>
           Let us know your feedback
@@ -84,7 +85,7 @@ const Option2Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
 
 const Option3Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
   return (
-    <div className="modal3">
+    <div className="modal3 modals">
       <div className="modal1header">
         <h2>
           Share your suggestions with us <br /> for a chance to earn reward
@@ -126,7 +127,7 @@ const Option3Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
 
 const Option4Modal: FC<ModalProps> = ({ onClose, onSubmit }) => {
   return (
-    <div className="modal4">
+    <div className="modal4 modals">
       <div className="modal1header">
         <h2>
           Let us know what your queries <br /> are!{" "}
@@ -156,6 +157,7 @@ const Menu: FC = () => {
   function toggle(e: any) {
     e.preventDefault();
     setOpenToggle(!openToggle);
+    closeModal();
   }
 
   const openModal = (modalName: string) => {
@@ -170,7 +172,7 @@ const Menu: FC = () => {
     e.preventDefault();
     // Add your form submission logic here
     // For example, you could send the form data to an API
-    console.log("Form submitted");
+   // console.log("Form submitted");
     closeModal();
   };
 
@@ -190,10 +192,12 @@ const Menu: FC = () => {
   };
 
   return (
-    <main className="fixed ">
+    <main className=" grid justify-center">
+      {renderModal()}
+      <Header/>
       <Background/>
       {openToggle ? (
-        <ul className={openToggle ? " options" : "flat"}>
+        <ul className={activeModal ? "flat" : "options"}>
           <button onClick={() => openModal("option1")}>
             <Report />
           </button>
@@ -209,7 +213,6 @@ const Menu: FC = () => {
           <button onClick={toggle}>
             <Close />
           </button>
-          {renderModal()}
         </ul>
       ) : (
         <button onClick={toggle} className="button">
